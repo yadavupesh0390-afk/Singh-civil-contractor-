@@ -215,26 +215,26 @@ text-decoration:none;
 }
   .hero{
 position:relative;
-height:35vh;
+height:80vh;
 overflow:hidden;
 display:flex;
 align-items:center;
 justify-content:center;
+text-align:center;
 }
 
-/* VIDEO */
+/* VIDEO BACKGROUND */
 .bg-video{
 position:absolute;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
+top:0;
+left:0;
 width:100%;
 height:100%;
-object-fit:contain; /* 👈 ये important है */
-z-index:-1;
-background:#000; /* side blank black दिखेगा */
+object-fit:cover;
+z-index:-2; /* important */
 }
-/* OVERLAY */
+
+/* DARK OVERLAY */
 .hero::after{
 content:"";
 position:absolute;
@@ -242,16 +242,33 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,0.6);
+background:rgba(0,0,0,0.65);
+z-index:-1;
 }
 
-/* TEXT */
+/* TEXT CONTENT */
 .hero-content{
 position:relative;
-z-index:1;
+z-index:2;
 color:#fff;
+max-width:700px;
+padding:20px;
 }
-  .hero-buttons{
+
+.hero-content h1{
+font-size:40px;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.hero-content p{
+font-size:16px;
+color:#ddd;
+margin-bottom:20px;
+}
+
+/* BUTTON CONTAINER */
+.hero-buttons{
 margin-top:20px;
 display:flex;
 gap:15px;
@@ -259,29 +276,45 @@ justify-content:center;
 flex-wrap:wrap;
 }
 
+/* COMMON BUTTON */
 .btn{
-background:#ff9800;
-color:#fff;
-padding:12px 20px;
+padding:12px 22px;
 border-radius:6px;
 text-decoration:none;
 font-size:14px;
+font-weight:500;
 transition:0.3s;
+display:inline-block;
 }
 
-.btn:hover{
+/* PRIMARY */
+.btn-main{
+background:#ff9800;
+color:#fff;
+}
+.btn-main:hover{
 background:#e68900;
 transform:scale(1.05);
 }
 
-/* WhatsApp */
+/* WHATSAPP */
 .whatsapp-btn{
 background:#25D366;
+color:#fff;
+}
+.whatsapp-btn:hover{
+background:#1ebe5d;
+transform:scale(1.05);
 }
 
-/* Call */
+/* CALL */
 .call-btn{
 background:#2196F3;
+color:#fff;
+}
+.call-btn:hover{
+background:#0b7dda;
+transform:scale(1.05);
 }
 </style>
 </head>
