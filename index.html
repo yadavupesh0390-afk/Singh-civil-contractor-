@@ -549,36 +549,32 @@ top:3px;
   top: 0;
   left: 0;
   width: 100%;
-  background: #ff6a00;
+  background: #000; /* 👈 black background */
   color: #fff;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* 👈 main fix */
+  justify-content: space-between;
   padding: 6px 15px;
   font-size: 14px;
   z-index: 9999;
 }
 
-/* CALL */
+/* CALL TEXT */
 .call-top-btn {
   font-weight: 700;
   text-decoration: none;
   color: #fff;
 }
 
+/* ICON BLUE */
+.call-top-btn i {
+  color: #2196F3; /* 👈 blue icon */
+  margin-right: 2px;
+}
+
 /* NAME */
 .name {
   font-weight: 700;
-}
-
-/* CALL ICON */
-.call-icon {
-  background: #fff;
-  color: #ff6a00;
-  padding: 4px 10px;
-  border-radius: 20px;
-  text-decoration: none;
-  font-size: 14px;
 }
 
 /* HEADER KO NICHE PUSH KARO */
@@ -611,11 +607,13 @@ top:3px;
 </header>
 
 <div class="top-call-bar">
+  
   <a href="tel:+919588462841" class="call-top-btn">
-    📞Call Now
+    <i class="fa-solid fa-phone"></i>Call Now
   </a>
 
   <span class="name">Preet Singh</span>
+
 </div>
 <div class="news">
 <div class="news-track">
