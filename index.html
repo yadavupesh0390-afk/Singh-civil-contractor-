@@ -544,11 +544,90 @@ right:8px;
 top:3px;
 }
 }
+  .call-popup {
+  position: fixed;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #ff6a00, #ff3c00);
+  color: white;
+  z-index: 9999;
+  transition: 0.5s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.call-popup.show {
+  top: 0;
+}
+
+.call-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+}
+
+.call-icon {
+  font-size: 22px;
+  animation: ring 1s infinite;
+}
+
+@keyframes ring {
+  0% { transform: rotate(0); }
+  25% { transform: rotate(15deg); }
+  50% { transform: rotate(-15deg); }
+  75% { transform: rotate(10deg); }
+  100% { transform: rotate(0); }
+}
+
+.call-text {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.call-text strong {
+  font-size: 16px;
+}
+
+.call-text small {
+  font-size: 12px;
+}
+
+.call-btn {
+  background: white;
+  color: #ff3c00;
+  padding: 6px 12px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.close-btn {
+  cursor: pointer;
+  font-size: 16px;
+}
 </style>
 </head>
 
 <body>
+<div class="call-popup" id="callPopup">
+  
+  <div class="call-content">
+    <span class="call-icon">📞</span>
+    
+    <div class="call-text">
+      <strong>Preet Singh</strong><br>
+      <small>Abhi Call Karen</small>
+    </div>
+    
+    <a href="tel:+919588462841" class="call-btn">Call Now</a>
+    
+    <span class="close-btn" onclick="closePopup()">✖</span>
+  </div>
 
+</div>
+  
 <header class="main-header">
 
 <div class="logo">
