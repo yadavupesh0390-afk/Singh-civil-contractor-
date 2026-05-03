@@ -544,6 +544,30 @@ right:8px;
 top:3px;
 }
 }
+  .top-call-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #ff6a00;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 6px 10px;
+  font-size: 13px;
+  z-index: 9999;
+  font-weight: 500;
+}
+
+.top-call-bar .name {
+  font-weight: 600;
+}
+
+.top-call-bar .msg {
+  opacity: 0.9;
+}
   
 </style>
 </head>
@@ -569,20 +593,15 @@ top:3px;
 
 </header>
 
-<div class="call-popup" id="callPopup">
+<div class="top-call-bar">
   
-  <div class="call-content">
-    <span class="call-icon">📞</span>
-    
-    <div class="call-text">
-      <strong>Preet Singh</strong><br>
-      <small>Abhi Call Karen</small>
-    </div>
-    
-    <a href="tel:+919588462841" class="call-btn">Call Now</a>
-    
-    <span class="close-btn" onclick="closePopup()">✖</span>
-  </div>
+  <span class="name">Preet Singh</span>
+  
+  <span class="msg">Abhi Call Karen</span>
+  
+  <a href="tel:+919588462841" class="call-icon">
+    📞
+  </a>
 
 </div>
 <div class="news">
