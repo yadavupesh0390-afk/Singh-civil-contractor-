@@ -544,7 +544,7 @@ right:8px;
 top:3px;
 }
 }
-  .top-call-bar {
+.top-call-bar {
   position: fixed;
   top: 0;
   left: 0;
@@ -554,38 +554,38 @@ top:3px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 18px; /* 👈 gap increase */
   padding: 6px 10px;
-  font-size: 13px;
+  font-size: 14px;
   z-index: 9999;
-  font-weight: 500;
 }
 
+/* NAME */
 .top-call-bar .name {
-  font-weight: 600;
+  font-weight: 700; /* 👈 bold */
 }
 
+/* CALL NOW */
 .top-call-bar .msg {
-  opacity: 0.9;
+  font-weight: 700; /* 👈 bold same as name */
+  letter-spacing: 0.5px;
 }
-  .top-call-bar{
-  height: 32px; /* fix height */
+
+/* CALL ICON */
+.call-icon {
+  background: #fff;
+  color: #ff6a00;
+  padding: 4px 10px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 14px;
 }
 
 /* HEADER KO NICHE PUSH KARO */
 .main-header{
   margin-top: 32px;
 }
-  .call-icon{
-  background: #fff;
-  color: #ff6a00;
-  padding: 3px 8px;
-  border-radius: 20px;
-  text-decoration: none;
-  font-size: 13px;
-  display: flex;
-  align-items: center;
-  }
+  
 </style>
 </head>
 
