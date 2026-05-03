@@ -553,24 +553,22 @@ top:3px;
   color: #fff;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 40px; /* name aur call ke beech gap */
-  padding: 6px 10px;
+  justify-content: space-between; /* 👈 main fix */
+  padding: 6px 15px;
   font-size: 14px;
   z-index: 9999;
 }
 
-/* NAME */
-.top-call-bar .name {
-  font-weight: 700;
-}
-
-/* CALL TEXT */
+/* CALL */
 .call-top-btn {
   font-weight: 700;
   text-decoration: none;
   color: #fff;
-  letter-spacing: 1px; /* 👈 gap almost finish */
+}
+
+/* NAME */
+.name {
+  font-weight: 700;
 }
 
 /* CALL ICON */
@@ -613,11 +611,11 @@ top:3px;
 </header>
 
 <div class="top-call-bar">
-  <span class="name">Preet Singh</span>
-  
   <a href="tel:+919588462841" class="call-top-btn">
     📞Call Now
   </a>
+
+  <span class="name">Preet Singh</span>
 </div>
 <div class="news">
 <div class="news-track">
